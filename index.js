@@ -1,21 +1,26 @@
+//Import the required classses
+const {Client, Intents} = require('discord.js');
+const { token } = require('./config.json');
+
+//creating new client instance	
+const client = new Client({ intents:[Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.DIRECT_MESSAGE_REACTIONS, Intents.FLAGS.GUILD_BANS, Intents.FLAGS.GUILD_INVITES] });
 
 
-const fs = require ('fs');
-const Discord = require('discord.js');
-const { prefix, TOKEN } = require('./config.json');
-
-const client = new Discord.Client();
-client.commands = new Discord.Collection();
+//when client is ready, run this code (only once)
+client.once('ready', () => {
+	console.log('Ready');
+	});
 
 
-client.login(TOKEN);
+//login to discord with your client's token
+client.login(token);
 
-
+/*
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 
 for (const file of commandFiles) {
     const command = require(`./commands/${file}`);
-    client.commands.set(command.name, command);
+    client.commands.set(command.name, command);client.commands = new Discconst Discord = ord.Collection();
 }
 
 client.on('ready', () => {
@@ -41,3 +46,5 @@ client.on('message', message =>
 		message.reply('there was an error trying to execute that command!');
 	}
 });
+
+*/
