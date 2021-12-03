@@ -8,6 +8,10 @@ To run locally ensure you have created the `config.json` file with the following
     "token": "<YOUR_TOKEN"
 }
 ```
+Once your token is in the `config.json` file you can run the bot by running:
+```sh
+    node index.js
+```
 ### Minishift
 
 Run the following terminal commands to setup your terminal env:
