@@ -5,7 +5,7 @@
 To run locally ensure you have created the `config.json` file with the following info:
 ```json
 {
-    "token": "<YOUR_TOKEN"
+    "token": "<YOUR_TOKEN>"
 }
 ```
 Once your token is in the `config.json` file you can run the bot by running:
